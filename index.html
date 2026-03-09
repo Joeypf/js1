@@ -5,7 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Day 1</title>
 </head>
+
+    <style> .class-example
+    {
+        background-color: red;
+    }
+
+    </style>
+
 <body>
+
+    <h1 id="MainHeader">Hello</h1>
+
+    <button onclick="displayWelcome()">Click here!</button>
+
+    <h2 id="OtherHeader">this button is disabled</h2>
+    <!-- executes javascript function/method when button is clicked -->
+    <button disabled onclick="displayWelcome()">Click here!</button>
+
+    <h3>this button resets the class if applied to h1 and sets mainheader text to "hello"</h3>
+    <button onclick="Reset()">reset here!</button>
+
+
+    <!-- tag to execute lines of javascript  within the script tags-->
+    <script>
+
+        //functions same as c#
+
+        function displayWelcome()
+            {   
+                console.log("displayWelcome function executed")
+                //will display an alert display button clicked! on the webpage
+                alert('Button clicked!')
+
+                mainHeader = document.getElementById("MainHeader")
+                mainHeader.innerHTML="WOW"
+                mainHeader.classList.add("class-example");
+                document.getElementById("OtherHeader").
+                //capital letters matter in javascript
+
+                otherHeader = document.getElementById("OtherHeader")
+                otherHeader.innerHTML="Woah"
+
+            }
+        //removes the redbackground from the header and changes the header text back
+        function Reset()
+        {
+            console.log("reset function executed")
+            mainHeader.innerHTML="Hello"
+            mainHeader.classList.remove("class-example")
+        }
+
+    </script>
+
+
+
+
     
 </body>
 </html>
